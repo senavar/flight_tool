@@ -1,0 +1,14 @@
+{
+    "name": "Python Dev Container",
+    "image": "mcr.microsoft.com/vscode/devcontainers/python:3.9",
+    "workspaceFolder": "/workspace",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    "settings": {
+      "python.pythonPath": "/usr/local/bin/python"
+    },
+    "postCreateCommand": "pip install --no-cache-dir -r requirements.txt && wget -q -O /usr/local/bin/chromedriver https://chromedriver.storage.googleapis.com/$(wget -q -O - https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip && unzip /usr/local/bin/chromedriver -d /usr/local/bin && chmod +x /usr/local/bin/chromedriver",
+    "extensions": [
+      "ms-python.python",
+      "ms-azuretools.vscode-docker"
+    ]
+  }

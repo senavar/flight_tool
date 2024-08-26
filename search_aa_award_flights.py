@@ -1,5 +1,5 @@
 """
-Script to search for AA award availablity for multiple origin/destination pairs
+Script to search for AA award availability for multiple origin/destination pairs
 and dates. It lets you filter on departure time, duration, number of stops, 
 and number of miles. 
 
